@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+ADVANCED RECRUITING WEBSITE TEMPLATE
+Perfect Game–Style | Auto Stats | Metrics | Scout PDFs
+-->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>NBA Thunder National 14U Baseball Team | Recruiting Profiles</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;width:100%;height:100%;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+
+/* Background video */
+#video-wrapper{position:fixed;top:0;left:0;width:100vw;height:100vh;overflow:hidden;z-index:-2}
+#bgVideo{width:100%;height:100%;object-fit:cover}
+
+/* Fade overlay */
+#fade-overlay{position:fixed;top:0;left:0;width:100vw;height:100vh;background:#000;opacity:0;transition:opacity 1.2s ease;z-index:-1}
+
+header{background:rgba(0,0,0,.6);color:#fff;padding:1.4rem 1rem;text-align:center}
+header h1{margin:0;font-size:1.8rem}
+header p{margin:.4rem 0 0;font-size:1rem}
+
+.container{max-width:1100px;margin:2rem auto;padding:0 1rem}
+
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+
+.card{background:rgba(255,255,255,.95);border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.18);padding:1.2rem;text-align:center}
+.card h2{margin:.4rem 0;font-size:1.05rem}
+.card a{display:inline-block;margin-top:.6rem;text-decoration:none;color:#fff;background:#b11226;padding:.5rem 1rem;border-radius:8px;font-size:.8rem}
+
+footer{text-align:center;padding:1.5rem 1rem;font-size:.8rem;color:#eee}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 900px){
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (max-width: 600px){
+  header h1{font-size:1.5rem}
+  header p{font-size:.9rem}
+  .container{margin:1.2rem auto}
+
+  .team-grid{
+    grid-template-columns:repeat(3,1fr);
+    gap:.5rem;
+  }
+
+  .card{
+    padding:.6rem;
+  }
+
+  .card h2{
+    font-size:.8rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="video-wrapper">
+  <video id="bgVideo" autoplay muted loop playsinline>
+    <source src="videos/baseballclipforwebpage_v2.mp4" type="video/mp4" />
+  </video>
+</div>
+<div id="fade-overlay"></div>
+
+<header>
+  <h1>NBA Thunder 14U National</h1>
+  <p>Level: MAJOR</p>
+  <p>Public Player Evaluation Profiles</p>
+</header>
+
+<div class="container">
+  <div class="team-grid">
+    <div class="card"><h2>Wyatt Bruner</h2><a href="wyatt-bruner.html">View Profile</a></div>
+    <div class="card"><h2>Ryan Anderson</h2><a href="ryan-anderson.html">View Profile</a></div>
+    <div class="card"><h2>Teddy Trepka</h2><a href="teddy-trepka.html">View Profile</a></div>
+    <div class="card"><h2>Will Torr</h2><a href="will-torr.html">View Profile</a></div>
+    <div class="card"><h2>Charlie Eblen</h2><a href="charlie-eblen.html">View Profile</a></div>
+    <div class="card"><h2>Lucca Gurrola</h2><a href="lucca-gurrola.html">View Profile</a></div>
+    <div class="card"><h2>Nate Williams</h2><a href="nate-williams.html">View Profile</a></div>
+    <div class="card"><h2>Chace Cournoyer</h2><a href="chace-cournoyer.html">View Profile</a></div>
+    <div class="card"><h2>Connor Johnson</h2><a href="connor-johnson.html">View Profile</a></div>
+    <div class="card"><h2>Dylan Minoggie</h2><a href="dylan-minoggie.html">View Profile</a></div>
+    <div class="card"><h2>Leo Chae</h2><a href="leo-chae.html">View Profile</a></div>
+    <div class="card"><h2>Alex Haley</h2><a href="alex-haley.html">View Profile</a></div>
+  </div>
+</div>
+
+<footer>© 2026 NBA Thunder 14U National Baseball Team | Player Profiles</footer>
+
+<script>
+const video = document.getElementById('bgVideo');
+const overlay = document.getElementById('fade-overlay');
+video.playbackRate = 0.5;
+
+video.addEventListener('timeupdate', () => {
+  const remaining = video.duration - video.currentTime;
+  if (remaining <= 1.2) {
+    overlay.style.opacity = '0.45';
+  } else {
+    overlay.style.opacity = '0';
+  }
+});
+</script>
+
+</body>
+</html>
